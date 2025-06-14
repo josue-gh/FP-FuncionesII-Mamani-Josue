@@ -8,14 +8,19 @@ int tragamonedas(int s ){
 	return s*10;
 }
 
+int tragamonedas1(int p){
+	return p*2;
+}
 
-
+int tragamonedas2(int q){
+	return q*5;
+}
 
 
 int main(){
 	
 	int a, b, c, mon, apos;
-	string r;
+	string respuesta;
 	
 	cout<<"juego del tragamoneda "<<endl;
 	cout<<"inicias con 100 monedas "<<endl;
@@ -36,11 +41,64 @@ int main(){
 	
 	if(a==b and b==c and a==c){
 	
-	cout<<"has ganado: "<<tragamonedas(apos)<<endl;	
+	cout<<"has ganado: "<<tragamonedas(apos)<<endl;
+	
+	mon= mon+ tragamonedas(apos);
+	cout<<"monedas= "<<mon <<endl;
+	
+	}else if(a==b or b==c or a==c){
+		
+	cout<<"has ganado: "<< tragamonedas1(apos) <<endl;
+	mon= mon+ tragamonedas1(apos);
+	cout<<"monedas= "<<mon<<endl;
+	}else if(a==1 and b==2 and c==3){
+		
+	cout<<"has ganado: "<<tragamonedas2(apos) <<endl;
+	mon=mon + tragamonedas2(apos);
+	cout<<"monedas= "<<mon <<endl;
+	
+	}else if(a==2 and b==3 and c==4){
+		
+	cout<<"has ganado: "<<tragamonedas2(apos) <<endl;
+	mon=mon + tragamonedas2(apos);
+	cout<<"monedas= "<<mon <<endl;
+	
+	}else if(a==3 and b==4 and c==5){
+		
+	cout<<"has ganado: "<<tragamonedas2(apos) <<endl;
+	mon=mon + tragamonedas2(apos);
+	cout<<"monedas= "<<mon <<endl;
+	
+	}else if(a==5 and b==4 and c==3){
+	
+	cout<<"has ganado: "<<tragamonedas2(apos) <<endl;
+	mon=mon + tragamonedas2(apos);
+	cout<<"monedas= "<<mon <<endl;
+	
+	}else if(a==4 and b==3 and c==2){
+		
+	cout<<"has ganado: "<<tragamonedas2(apos) <<endl;
+	mon=mon + tragamonedas2(apos);
+	cout<<"monedas= "<<mon <<endl;
+	
+	} else if(a==3 and b==2 and c==1){
+		
+	cout<<"has ganado: "<<tragamonedas2(apos) <<endl;
+	mon=mon + tragamonedas2(apos);
+	cout<<"monedas= "<<mon <<endl;
+	
+	}else{
+		
+	cout<<"has perdido: "<<apos<<endl;
+	mon=mon-apos,
+	cout<<"monedas= "<<mon<<endl;
+	
 	}
 		
 	cout<<"deseas seguir jugando? (si o no) "<<endl;
-	cin>>r;	
-	}while(r=="si" or mon>0);
+	cin>>respuesta;	
+	cout<<endl;
+	
+	}while(respuesta =="si" or mon>0);
 	
 }
