@@ -20,7 +20,8 @@ int tragamonedas2(int q){
 int main(){
 	
 	int a, b, c, mon, apos;
-	string respuesta;
+	
+	string r;
 	
 	cout<<"juego del tragamoneda "<<endl;
 	cout<<"inicias con 100 monedas "<<endl;
@@ -28,11 +29,20 @@ int main(){
 	mon=100;
 	
 	do{
+	
+	do{
+	
 		
 	cout<<"cuanto deseas apostar en esta ronda (1-10) "<<endl;
 	cin>> apos;
 	cout<< endl;
-		
+    
+	if(apos>10 or apos<1){
+    cout<<"error, vuelve a intentarlo "<<endl;
+	}
+    
+    }while(apos>10 or apos<1);
+    
 	a= rand( ) % 5+1;
 	b= rand( ) % 5+1;
 	c= rand( ) % 5+1;
@@ -95,10 +105,13 @@ int main(){
 	
 	}
 		
-	cout<<"deseas seguir jugando? (si o no) "<<endl;
-	cin>>respuesta;	
+	cout<<"deseas seguir jugando? (si / no)  "<<endl;
+ 
+	cin>> r;	
 	cout<<endl;
 	
-	}while(respuesta =="si" or mon>0);
+	}while(r=="si" and mon>0);
+	
+	return 0;
 	
 }
