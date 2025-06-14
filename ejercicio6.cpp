@@ -74,9 +74,24 @@ int main(){
     cout<<"error"<< endl;
     }
 		
-	
 	}	
 	
+	if (c>i){
+		
+    cout<<"el ganador es usted! "<<endl;
+    
+	cout<<"tu: "<<c<<endl;
+    cout<<"máquina: "<<i;
+    
+    }else{
+    	
+    cout<<"el ganador es la máquina "<<endl;
+   
+   cout<<"tu: "<<c <<endl;
+    cout<<"máquina: "<<i;
+    
+    }
+    
 	return 0;
 	}	
 
